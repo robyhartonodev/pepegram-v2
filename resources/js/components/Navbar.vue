@@ -11,7 +11,7 @@
 
       <div id="navbarToggler" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-          <locale-dropdown />
+          <!-- <locale-dropdown /> -->
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li> -->
@@ -60,11 +60,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import LocaleDropdown from './LocaleDropdown'
+// import LocaleDropdown from './LocaleDropdown'
 
 export default {
   components: {
-    LocaleDropdown
+    // LocaleDropdown
   },
 
   data: () => ({
