@@ -2,7 +2,7 @@
   <div>
     <div class="top-right links">
       <template v-if="authenticated">
-        <router-link :to="{ name: 'home' }">
+        <router-link :to="`home/${user.id}`">
           {{ $t('home') }}
         </router-link>
       </template>
@@ -47,7 +47,8 @@ export default {
   }),
 
   computed: mapGetters({
-    authenticated: 'auth/check'
+    authenticated: 'auth/check',
+    user: 'auth/user'
   })
 }
 </script>
