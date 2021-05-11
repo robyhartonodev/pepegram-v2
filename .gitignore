@@ -14,5 +14,6 @@ yarn-error.log
 phpunit.dusk.xml
 /public/dist
 /public/build
+/public/images
 /public/mix-manifest.json
 .idea
