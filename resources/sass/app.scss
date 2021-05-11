@@ -1,8 +1,16 @@
 @import 'variables';
 @import '~bootstrap/scss/bootstrap';
 @import '~sweetalert2/src/sweetalert2';
+@import "~bootstrap-vue/src/index";
 
 @import 'elements/card';
 @import 'elements/navbar';
 @import 'elements/buttons';
 @import 'elements/transitions';
+
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400&display=swap');
+
+.instagram-font {
+  font-family: 'Oleo Script', cursive;
+  color: #152238;
+}
