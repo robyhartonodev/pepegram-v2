@@ -1,9 +1,17 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-      <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand instagram-font">
+
+      <router-link :to="user ? `/home/${user.id}` : 'welcome'" class="navbar-brand instagram-font">
         {{ appName }}
       </router-link>
+
+      <b-img
+        src="/images/pepe.svg"
+        alt="pepegram-logo"
+        :height="30"
+        :width="30"
+      />
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false">
         <span class="navbar-toggler-icon" />
@@ -24,7 +32,6 @@
                href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
             >
               <img :src="user.photo_url" class="rounded-circle profile-photo mr-1">
-              {{ user.name }}
             </a>
             <div class="dropdown-menu">
               <router-link :to="{ name: 'settings.profile' }" class="dropdown-item pl-3">
@@ -74,6 +81,10 @@ export default {
   computed: mapGetters({
     user: 'auth/user'
   }),
+
+  mounted () {
+    console.log(this.user)
+  },
 
   methods: {
     async logout () {
