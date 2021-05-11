@@ -17,12 +17,16 @@
     </div>
 
     <div class="text-center">
-      <div class="title mb-4">
-        {{ title }}
-      </div>
+      <b-img
+        src="/images/pepe.svg"
+        alt="pepegram-logo"
+        fluid
+        :height="300"
+        :width="300"
+      />
 
-      <div class="links">
-        <a href="https://github.com/cretueusebiu/laravel-vue-spa">github.com/cretueusebiu/laravel-vue-spa</a>
+      <div class="title mb-4 instagram-font">
+        {{ title }}
       </div>
     </div>
   </div>
